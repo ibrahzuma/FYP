@@ -10,7 +10,7 @@ class _AboutScreenState extends State<AboutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white54,
+      // backgroundColor: Colors.white54,
       body: ListView(
         children: [
           //image
@@ -18,7 +18,7 @@ class _AboutScreenState extends State<AboutScreen> {
             height: 230,
             child: Center(
               child: Image.asset(
-                "assets/udsm.png",
+                "images/mechanics.png",
                 width: 260,
               ),
             ),
@@ -31,7 +31,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 "Technician Booking App",
                 style: TextStyle(
                   fontSize: 28,
-                  color: Colors.white54,
+                  // color: Colors.white54,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -42,13 +42,13 @@ class _AboutScreenState extends State<AboutScreen> {
 
               //about you & your company - write some info
               const Text(
-                "This app has been developed by Ibrahim Hussein, "
-                "This is the world number 1 Technician Booking app. Available for all. "
-                "20M+ people already use this app.",
+                "This app has been developed by Redmark Solution Limited,\n "
+                "This is number one Technician Booking app. Available for all. ",
+                // "20M+ people already use this app.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.white54,
+                  // color: Colors.white54,
                 ),
               ),
 
@@ -56,16 +56,16 @@ class _AboutScreenState extends State<AboutScreen> {
                 height: 10,
               ),
 
-              const Text(
-                "This app has been developed by Ibrahim Hussein, "
-                "This is the world number 1 rTechnician Booking app. Available for all. "
-                "20M+ people already use this app.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white54,
-                ),
-              ),
+              // const Text(
+              //   "This app has been developed by Ibrahim Hussein, "
+              //   "This is the world number 1 Technician Booking app. Available for all. ",
+              //   // "20M+ people already use this app.",
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(
+              //     fontSize: 16,
+              //     color: Colors.white54,
+              //   ),
+              // ),
 
               const SizedBox(
                 height: 40,
@@ -77,11 +77,11 @@ class _AboutScreenState extends State<AboutScreen> {
                   SystemNavigator.pop();
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white54,
+                  backgroundColor: Colors.blue,
                 ),
                 child: const Text(
-                  "Close",
-                  style: TextStyle(color: Colors.black),
+                  "Back",
+                  // style: TextStyle(color: Colors.black),
                 ),
               ),
             ],

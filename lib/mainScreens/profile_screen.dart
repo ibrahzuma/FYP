@@ -13,7 +13,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +23,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               userModelCurrentInfo!.name!,
               style: const TextStyle(
                 fontSize: 50.0,
-                color: Colors.white,
+                // color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -32,7 +32,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: 20,
               width: 200,
               child: Divider(
-                color: Colors.white,
+                // color: Colors.white,
                 height: 2,
                 thickness: 2,
               ),
@@ -60,14 +60,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
             ElevatedButton(
               onPressed: () {
-                SystemNavigator.pop();
+                Navigator.pop(context);
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.white54,
+                primary: Colors.blue,
               ),
               child: const Text(
-                "Close",
-                style: TextStyle(color: Colors.white),
+                "Back",
+                // style: TextStyle(color: Colors.white),
               ),
             )
           ],

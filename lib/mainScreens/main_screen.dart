@@ -389,6 +389,8 @@ class _MainScreenState extends State<MainScreen> {
               ),
             );
 
+            
+
             if (response == "cashPayed") {
               //user can rate the driver now
               if ((eventSnap.snapshot.value as Map)["driverId"] != null) {
@@ -630,7 +632,7 @@ class _MainScreenState extends State<MainScreen> {
         width: 265,
         child: Theme(
           data: Theme.of(context).copyWith(
-            canvasColor: Color.fromARGB(255, 25, 11, 11),
+            // canvasColor: Color.fromARGB(255, 25, 11, 11),
           ),
           child: MyDrawer(
             name: userName,
@@ -655,7 +657,7 @@ class _MainScreenState extends State<MainScreen> {
               newGoogleMapController = controller;
 
               //for black theme google map
-              blackThemeGoogleMap();
+              // blackThemeGoogleMap();
 
               setState(() {
                 bottomPaddingOfMap = 240;
@@ -699,7 +701,7 @@ class _MainScreenState extends State<MainScreen> {
               child: Container(
                 height: searchLocationContainerHeight,
                 decoration: const BoxDecoration(
-                  color: Colors.black87,
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(20),
                     topLeft: Radius.circular(20),
@@ -715,7 +717,7 @@ class _MainScreenState extends State<MainScreen> {
                         children: [
                           const Icon(
                             Icons.add_location_alt_outlined,
-                            color: Colors.grey,
+                            color: Colors.blue,
                           ),
                           const SizedBox(
                             width: 12.0,
@@ -726,8 +728,13 @@ class _MainScreenState extends State<MainScreen> {
                               const Text(
                                 "My Current Location",
                                 style:
-                                    TextStyle(color: Colors.grey, fontSize: 12),
+                                    TextStyle(
+                                      // color: Colors. 
+                                      fontSize: 12),
                               ),
+                              const SizedBox(
+                              height: 12.0,
+                          ),
                               Text(
                                 Provider.of<AppInfo>(context)
                                             .userPickUpLocation !=
@@ -739,7 +746,8 @@ class _MainScreenState extends State<MainScreen> {
                                         "..."
                                     : "Not Getting Your Location",
                                 style: const TextStyle(
-                                    color: Colors.grey, fontSize: 14),
+                                    // color: Colors.grey, 
+                                    fontSize: 14),
                               ),
                             ],
                           ),
@@ -751,7 +759,7 @@ class _MainScreenState extends State<MainScreen> {
                       const Divider(
                         height: 10,
                         thickness: 1,
-                        color: Colors.grey,
+                        // color: Colors.grey,
                       ),
 
                       const SizedBox(height: 16.0),
@@ -834,10 +842,36 @@ class _MainScreenState extends State<MainScreen> {
                           // }
                         },
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green,
+                            backgroundColor: Colors.blue,
                             textStyle: const TextStyle(
                                 fontSize: 16, fontWeight: FontWeight.bold)),
                       ),
+
+
+                  //     ElevatedButton(
+                  //       child: const Text(
+                  //         "Request a Technician",
+                  //       ),
+                  //       onPressed: () {
+                  //         Navigator.push(context,
+                  // MaterialPageRoute(builder: (c) => ListTech()));
+
+
+                  //         // if (Provider.of<AppInfo>(context, listen: false)
+                  //         //         .userDropOffLocation !=
+                  //         //     null) {
+                  //       // saveRideRequestInformation();
+
+                  //         // } else {
+                  //         //   Fluttertoast.showToast(
+                  //         //       msg: "Please select destination location");
+                  //         // }
+                  //       },
+                  //       style: ElevatedButton.styleFrom(
+                  //           backgroundColor: Colors.blue,
+                  //           textStyle: const TextStyle(
+                  //               fontSize: 16, fontWeight: FontWeight.bold)),
+                  //     ),
                     ],
                   ),
                 ),
@@ -853,7 +887,7 @@ class _MainScreenState extends State<MainScreen> {
             child: Container(
               height: waitingResponseFromDriverContainerHeight,
               decoration: const BoxDecoration(
-                color: Colors.black87,
+                // color: Colors.black87,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(20),
                   topLeft: Radius.circular(20),
@@ -865,12 +899,12 @@ class _MainScreenState extends State<MainScreen> {
                   child: AnimatedTextKit(
                     animatedTexts: [
                       FadeAnimatedText(
-                        'Waiting for Response\nfrom Techician',
+                        'Waiting for Response\nfrom Technician',
                         duration: const Duration(seconds: 6),
                         textAlign: TextAlign.center,
                         textStyle: const TextStyle(
                             fontSize: 30.0,
-                            color: Colors.white,
+                            // color: Colors.white,
                             fontWeight: FontWeight.bold),
                       ),
                       ScaleAnimatedText(
@@ -879,7 +913,7 @@ class _MainScreenState extends State<MainScreen> {
                         textAlign: TextAlign.center,
                         textStyle: const TextStyle(
                             fontSize: 32.0,
-                            color: Colors.white,
+                            color: Colors.black87,
                             fontFamily: 'Canterbury'),
                       ),
                     ],
@@ -897,7 +931,7 @@ class _MainScreenState extends State<MainScreen> {
             child: Container(
               height: assignedDriverInfoContainerHeight,
               decoration: const BoxDecoration(
-                color: Colors.black87,
+                color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(20),
                   topLeft: Radius.circular(20),
@@ -918,7 +952,7 @@ class _MainScreenState extends State<MainScreen> {
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white54,
+                          color: Colors.blue,
                         ),
                       ),
                     ),
@@ -930,7 +964,7 @@ class _MainScreenState extends State<MainScreen> {
                     const Divider(
                       height: 2,
                       thickness: 2,
-                      color: Colors.white54,
+                      // color: Colors.white54,
                     ),
 
                     const SizedBox(
@@ -943,7 +977,7 @@ class _MainScreenState extends State<MainScreen> {
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 16,
-                        color: Colors.white54,
+                        // color: Colors.white54,
                       ),
                     ),
 
@@ -958,7 +992,7 @@ class _MainScreenState extends State<MainScreen> {
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white54,
+                        // color: Colors.white54,
                       ),
                     ),
 
@@ -969,7 +1003,7 @@ class _MainScreenState extends State<MainScreen> {
                     const Divider(
                       height: 2,
                       thickness: 2,
-                      color: Colors.white54,
+                      // color: Colors.white54,
                     ),
 
                     const SizedBox(
@@ -977,26 +1011,26 @@ class _MainScreenState extends State<MainScreen> {
                     ),
 
                     //call driver button
-                    Center(
-                      child: ElevatedButton.icon(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
-                        ),
-                        icon: const Icon(
-                          Icons.phone_android,
-                          color: Colors.black54,
-                          size: 22,
-                        ),
-                        label: const Text(
-                          "Call Technician",
-                          style: TextStyle(
-                            color: Colors.black54,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
+                    // Center(
+                    //   child: ElevatedButton.icon(
+                    //     onPressed: () {},
+                    //     style: ElevatedButton.styleFrom(
+                    //       backgroundColor: Colors.blue,
+                    //     ),
+                    //     icon: const Icon(
+                    //       Icons.phone_android,
+                    //       color: Colors.blue,
+                    //       size: 22,
+                    //     ),
+                    //     label: const Text(
+                    //       "Call Technician",
+                    //       style: TextStyle(
+                    //         // color: Colors.black54,
+                    //         fontWeight: FontWeight.bold,
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

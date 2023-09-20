@@ -19,7 +19,7 @@ class _RateDriverScreenState extends State<RateDriverScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       body: Dialog(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
@@ -33,13 +33,15 @@ class _RateDriverScreenState extends State<RateDriverScreen> {
             borderRadius: BorderRadius.circular(6),
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               const SizedBox(
                 height: 22.0,
               ),
               const Text(
-                "Rate Technician Experience",
+                "Rate the Technician",
                 style: TextStyle(
                   fontSize: 22,
                   letterSpacing: 2,
@@ -61,8 +63,8 @@ class _RateDriverScreenState extends State<RateDriverScreen> {
                 rating: countRatingStars,
                 allowHalfRating: false,
                 starCount: 5,
-                color: Colors.green,
-                borderColor: Colors.green,
+                color: Colors.blue,
+                borderColor: Colors.blue,
                 size: 46,
                 onRatingChanged: (valueOfStarsChoosed) {
                   countRatingStars = valueOfStarsChoosed;
@@ -102,7 +104,7 @@ class _RateDriverScreenState extends State<RateDriverScreen> {
                 style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.green,
+                  // color: Colors.,
                 ),
               ),
               const SizedBox(
@@ -135,7 +137,7 @@ class _RateDriverScreenState extends State<RateDriverScreen> {
                     });
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.green,
+                    primary: Colors.blue,
                     padding: EdgeInsets.symmetric(horizontal: 74),
                   ),
                   child: const Text(

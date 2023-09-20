@@ -17,12 +17,12 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(14),
       ),
-      backgroundColor: Colors.grey,
+      // backgroundColor: Colors.grey,
       child: Container(
         margin: const EdgeInsets.all(6),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.black87,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(6),
         ),
         child: Column(
@@ -32,11 +32,11 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog> {
               height: 20,
             ),
             Text(
-              "Fare Amount".toUpperCase(),
+              "Payment".toUpperCase(),
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.grey,
-                fontSize: 16,
+                // color: Colors.grey,
+                fontSize: 30,
               ),
             ),
             const SizedBox(
@@ -46,27 +46,28 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog> {
               thickness: 4,
               color: Colors.grey,
             ),
-            const SizedBox(
-              height: 16,
-            ),
-            Text(
-              widget.fareAmount.toString(),
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.grey,
-                fontSize: 50,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+            // const SizedBox(
+            //   height: 16,
+            // ),
+            // Text(
+            //   widget.fareAmount.toString(),
+            //   style: const TextStyle(
+            //     fontWeight: FontWeight.bold,
+            //     color: Colors.grey,
+            //     fontSize: 50,
+            //   ),
+            // ),
+            // const SizedBox(
+            //   height: 10,
+            // ),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "This is the total fare amount, Please Pay it to the technician.",
+                "Thank you for working with us.\n Proceed to payment with the technician",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.grey,
+                  fontSize: 25
+                  // color: Colors.grey,
                 ),
               ),
             ),
@@ -77,7 +78,7 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog> {
               padding: const EdgeInsets.all(18.0),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
+                  primary: Colors.blue,
                 ),
                 onPressed: () {
                   Future.delayed(const Duration(milliseconds: 2000), () {
@@ -88,25 +89,27 @@ class _PayFareAmountDialogState extends State<PayFareAmountDialog> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      "Pay Cash",
+                      "Rate the technician",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
-                      "\$  " + widget.fareAmount!.toString(),
-                      style: const TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    // Text(
+                    //   "\$  " + widget.fareAmount!.toString(),
+                    //   style: const TextStyle(
+                    //     fontSize: 20,
+                    //     color: Colors.white,
+                    //     fontWeight: FontWeight.bold,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
             ),
+
+
             const SizedBox(
               height: 4,
             ),

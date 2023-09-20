@@ -94,8 +94,8 @@ class _HistoryDesignUIWidgetState extends State<HistoryDesignUIWidget> {
               children: [
                 Image.asset(
                   "images/car.png",
-                  height: 26,
-                  width: 26,
+                  height: 50,
+                  width: 50,
                 ),
                 const SizedBox(
                   width: 12,

@@ -52,9 +52,9 @@ class _SelectNearestActiveDriversScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.white54,
+        // backgroundColor: Colors.white54,
         title: const Text(
           "Nearest Online Technician",
           style: TextStyle(
@@ -76,7 +76,7 @@ class _SelectNearestActiveDriversScreenState
       body: ListView.builder(
         itemCount: dList.length,
         itemBuilder: (BuildContext context, int index) {
-          //index = 0;
+          //index = 4;
           return GestureDetector(
             onTap: () {
               setState(() {
@@ -85,9 +85,9 @@ class _SelectNearestActiveDriversScreenState
               Navigator.pop(context, "driverChoosed");
             },
             child: Card(
-              color: Colors.grey,
+              color: Colors.white,
               elevation: 3,
-              shadowColor: Colors.green,
+              shadowColor: Colors.blue,
               margin: const EdgeInsets.all(8),
               child: ListTile(
                 leading: Padding(
@@ -106,21 +106,21 @@ class _SelectNearestActiveDriversScreenState
                       dList[index]["name"],
                       style: const TextStyle(
                         fontSize: 14,
-                        color: Colors.black54,
+                        color: Colors.black87,
                       ),
                     ),
-                    Text(
-                      dList[index]["car_details"]["type"],
-                      style: const TextStyle(
-                        fontSize: 12,
-                        color: Colors.white54,
-                      ),
-                    ),
+                    // Text(
+                    //   dList[index]["car_details"]["type"],
+                    //   style: const TextStyle(
+                    //     fontSize: 12,
+                    //     // color: Colors.white54,
+                    //   ),
+                    // ),
                     SmoothStarRating(
                       rating: dList[index]["ratings"] == null
                           ? 0.0
                           : double.parse(dList[index]["ratings"]),
-                      color: Colors.yellow,
+                      color: Colors.blue,
                       borderColor: Colors.black,
                       allowHalfRating: true,
                       starCount: 5,
@@ -131,10 +131,17 @@ class _SelectNearestActiveDriversScreenState
                 trailing: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      "\Tsh " + getFareAmountAccordingToVehicleType(index),
+                    // Text(
+                    //   "\Tsh " + getFareAmountAccordingToVehicleType(index),
+                    //   style: const TextStyle(
+                    //     fontWeight: FontWeight.bold,
+                    //   ),
+                    // ),
+                       Text(
+                      dList[index]["car_details"]["type"],
                       style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                        // color: Colors.white54,
                       ),
                     ),
                     const SizedBox(
@@ -152,15 +159,15 @@ class _SelectNearestActiveDriversScreenState
                     const SizedBox(
                       height: 2,
                     ),
-                    Text(
-                      tripDirectionDetailsInfo != null
-                          ? tripDirectionDetailsInfo!.distance_text!
-                          : "",
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black54,
-                          fontSize: 12),
-                    ),
+                    // Text(
+                    //   tripDirectionDetailsInfo != null
+                    //       ? tripDirectionDetailsInfo!.distance_text!
+                    //       : "0.0",
+                    //   style: const TextStyle(
+                    //       fontWeight: FontWeight.bold,
+                    //       color: Colors.black54,
+                    //       fontSize: 12),
+                    // ),
                   ],
                 ),
               ),
